@@ -18,6 +18,18 @@ public class Stock {
     @Column(name="KIDS")
     private int xs;
 
+    @Column(name="S")
+    private int s;
+
+    @Column(name="M")
+    private int m;
+
+    @Column(name="L")
+    private int l;
+    
+    @Column(name="XL")
+    private int xl;
+
     @JsonIgnore
     @OneToOne
     @MapsId
@@ -55,6 +67,62 @@ public class Stock {
     }
 
     /**
+     * @return the s
+     */
+    public int getS() {
+        return s;
+    }
+
+    /**
+     * @param s the s to set
+     */
+    public void setS(int s) {
+        this.s = s;
+    }
+
+    /**
+     * @return the m
+     */
+    public int getM() {
+        return m;
+    }
+
+    /**
+     * @param m the m to set
+     */
+    public void setM(int m) {
+        this.m = m;
+    }
+
+    /**
+     * @return the l
+     */
+    public int getL() {
+        return l;
+    }
+
+    /**
+     * @param l the l to set
+     */
+    public void setL(int l) {
+        this.l = l;
+    }
+
+    /**
+     * @return the xl
+     */
+    public int getXl() {
+        return xl;
+    }
+
+    /**
+     * @param xl the xl to set
+     */
+    public void setXl(int xl) {
+        this.xl = xl;
+    }
+
+        /**
      * @return the sock
      */
     public Sock getSock() {
