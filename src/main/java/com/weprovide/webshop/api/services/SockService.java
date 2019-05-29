@@ -61,12 +61,23 @@ public class SockService {
 
 
 	public Stock getStock(Long sockId) {
+        //NEW
+
+
+        
+        //NEW
 
         Sock sock = this.sockRepository.findById(sockId).get();
         
         if(sock.getStock() == null){
             Stock testStock = new Stock();
+            
             testStock.setXs(3);
+            testStock.setS(3);
+            testStock.setM(3);
+            testStock.setL(3);
+            testStock.setXl(0);
+
             testStock.setSock(sock);        
             sock.setStock(testStock);
             this.sockRepository.save(sock);
